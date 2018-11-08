@@ -1,5 +1,6 @@
 \iftrue
-  \directlua{dofile("harf.lua")}
+  \input luaotfload.sty
+  \directlua{require'laharf'}
 \else
   \input luaotfload.sty
 \fi
@@ -7,9 +8,9 @@
 \font\testb="[lmroman10-bold.otf]:script=latn" at 10pt
 \font\testi="[lmromanslant10-regular.otf]:script=latn" at 10pt
 \font\testR="[lmroman12-regular.otf]:script=latn" at 12pt
-\font\testA="[amiri-regular.ttf]:script=arab" at 10pt
-\font\testB="[amiri-bold.ttf]:script=arab" at 10pt
-\font\testF="[NotoSerifCJK-Regular.ttc]:script=latn;" at 10pt
+\font\testA="[amiri-regular.ttf]:mode=buzz;script=arab" at 10pt
+\font\testB="[amiri-bold.ttf]:mode=buzz;script=arab" at 10pt
+\font\testF="[NotoSerifCJK-Regular.ttc]:mode=buzz;script=latn;" at 10pt
 
 \testA
 
