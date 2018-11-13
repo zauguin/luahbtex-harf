@@ -55,7 +55,14 @@ local function parse(str)
 end
 
 local function define_font(name, size)
-  local spec = parse(name)
+  local spec
+  if type(name) == 'table' then
+    spec = name
+    name = spec.name
+  else
+    spec = parse(name)
+  end
+  local spec = type(name) == 'table' and name or parse(name)
   local tfmdata = nil
   local filename, index = nil, 0
 

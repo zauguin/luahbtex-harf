@@ -1,13 +1,9 @@
-\iftrue
-  \input luaotfload.sty
-  \directlua{require'laharf'}
-\else
-  \input luaotfload.sty
-\fi
-\font\testr="[lmroman10-regular.otf]:script=latn;+dlig" at 10pt
-\font\testb="[lmroman10-bold.otf]:script=latn" at 10pt
-\font\testi="[lmromanslant10-regular.otf]:script=latn" at 10pt
-\font\testR="[lmroman12-regular.otf]:script=latn" at 12pt
+\input luaotfload.sty
+\directlua{require'laharf'}
+\font\testr="[lmroman10-regular.otf]:mode=buzz;script=latn;+dlig" at 10pt
+\font\testb="[lmroman10-bold.otf]:mode=buzz;-liga;script=latn" at 10pt
+\font\testi="[lmromanslant10-regular.otf]:mode=buzz;script=latn" at 10pt
+\font\testR="[lmroman12-regular.otf]:mode=buzz;script=latn" at 12pt
 \font\testA="[amiri-regular.ttf]:mode=buzz;script=arab" at 10pt
 \font\testB="[amiri-bold.ttf]:mode=buzz;script=arab" at 10pt
 \font\testF="[NotoSerifCJK-Regular.ttc]:mode=buzz;script=latn;" at 10pt
@@ -64,7 +60,7 @@ offbeat office baffle coffee HAVANA\par
 \testr
 \hrule
 \vskip 1in
-\centerline{\testb A SHORT STORY}
+\centerline{\testb A ff SHORT STORY}
 \vskip 6pt
 \centerline{\testi by A. U. Thor}
 \vskip .5cm
